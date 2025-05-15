@@ -1,0 +1,16 @@
+Voorstel herwerking portfolio (LABS)
+
+Tijdens de komende twee LABS-lessen (deze en volgende week) ga ik actief werken aan een herstructurering van mijn portfolio. De website heeft eerder al een grote rework ondergaan, en destijds was het projectgedeelte volledig up-to-date. Inmiddels sluit dit gedeelte echter niet meer aan bij mijn huidige niveau en inzichten. Daarom wil ik een middelgrote herwerking uitvoeren, zodat de inhoud weer relevant en representatief is.
+
+De geplande werkzaamheden omvatten:
+
+Het verwijderen en/of toevoegen van projecten.
+
+Het splitsen of samenvoegen van bestaande projecten om de inhoud logischer te structureren.
+
+Een rework van de banner, zodat deze visueel aantrekkelijker wordt en beter aansluit op de inhoud van de website.
+
+Hoewel het ontwerpen van de nieuwe banner en het herwerken van de projecten qua tijdsinvestering vergelijkbaar zijn, vereist het software development-gedeelte iets meer aandacht. Dit komt doordat ik ook de structuur van de projecten opnieuw moet indelen en logisch moet groeperen.
+
+Mijn doel is om aan het eind van deze twee weken een portfolio te hebben dat niet alleen visueel sterker is, maar ook inhoudelijk beter aansluit op mijn huidige vaardigheden en ambities.
+
