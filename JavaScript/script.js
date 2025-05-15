@@ -302,6 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 images: item.getAttribute("data-images") ? item.getAttribute("data-images").split(',') : [],
                 videos: item.getAttribute("data-videos") ? item.getAttribute("data-videos").split(',') : [],
                 additionaltext: item.getAttribute("data-additional-text"),
+                additional_images: item.getAttribute("additional-data-images") ? item.getAttribute("data-images").split(',') : [],
                 textboxtitle: item.getAttribute("data-textboxtitle"),
                 additionalboxtitle: item.getAttribute("data-additionalboxtitle")
             };
