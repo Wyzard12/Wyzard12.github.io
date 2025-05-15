@@ -206,19 +206,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Clear previous media content
         modalImages.innerHTML = "";
 
-        // Handle images
-        if (projectData.images && projectData.images.length > 0) {
-            projectData.images.forEach(src => {
-                if (src.trim() !== "") {
-                    const imgElement = document.createElement("img");
-                    imgElement.src = src.trim();
-                    imgElement.classList.add("modal-image");
-                    imgElement.onclick = () => zoomImage(src.trim());
-                    modalImages.appendChild(imgElement);
-                }
-            });
-        }
-
         // Handle videos
         if (projectData.videos && projectData.videos.length > 0) {
             projectData.videos.forEach(src => {
@@ -232,6 +219,19 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
+        // Handle images
+        if (projectData.images && projectData.images.length > 0) {
+            projectData.images.forEach(src => {
+                if (src.trim() !== "") {
+                    const imgElement = document.createElement("img");
+                    imgElement.src = src.trim();
+                    imgElement.classList.add("modal-image");
+                    imgElement.onclick = () => zoomImage(src.trim());
+                    modalImages.appendChild(imgElement);
+                }
+            });
+        }
+       
         // Show the modal with animation
         modal.style.display = "flex"; // Ensure display is flex
         setTimeout(() => {
@@ -299,8 +299,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 title: item.getAttribute("data-title"),
                 description: item.getAttribute("data-description"),
                 banner: item.getAttribute("data-banner"),
-                images: item.getAttribute("data-images") ? item.getAttribute("data-images").split(',') : [],
                 videos: item.getAttribute("data-videos") ? item.getAttribute("data-videos").split(',') : [],
+                images: item.getAttribute("data-images") ? item.getAttribute("data-images").split(',') : [],
                 additionaltext: item.getAttribute("data-additional-text"),
                 additional_images: item.getAttribute("additional-data-images") ? item.getAttribute("data-images").split(',') : [],
                 textboxtitle: item.getAttribute("data-textboxtitle"),
