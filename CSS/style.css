@@ -235,7 +235,7 @@ nav.menu {
 }
 
 .nav-list li a:hover {
-    color: white; /* Change color on hover */
+    color: blue; /* Change color on hover */
 }
 
 .contact-button {
