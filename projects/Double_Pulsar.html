@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Wyzard's Ark</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/project_style/project_style.css">
+    <link rel="icon" href="../img/WA.jpg" type="image/jpg">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo reveal-up">
+            <a href="../index.html">
+                <img src="../img/WAwhite-removebg.png" alt="Wyzard's Ark Logo">
+            </a>
+        </div>
+
+        <nav class="nav-links reveal-up">
+            <a href="../index.html#about" class="nav-item-link">Back to About me</a>
+            <a href="../index.html#skills" class="nav-item-link">Back to Skills</a>
+            <a href="../index.html#projects" class="nav-item-link">Back to Projects</a>
+            <a href="../index.html#contact" class="nav-item-link">Contact</a>
+        </nav>
+
+        <div class="lang-selector reveal-up">
+            <a href="../_NLD/projects/Double_Pulsar_NL.html" class="lang-item reveal-up">
+                <span>NL</span>
+                <img src="https://flagcdn.com/w20/nl.png" alt="Netherlands Flag" class="flag-icon reveal-up">
+            </a>
+            <span class="divider">|</span>
+            <a href="../_VIE/projects/Double_Pulsar_VN.html" class="lang-item reveal-up">
+                <img src="https://flagcdn.com/w20/vn.png" alt="Vietnam Flag" class="flag-icon reveal-up">
+                <span>VN</span>
+            </a>
+        </div>
+
+        <button class="mobile-burger-btn reveal-up" aria-label="Toggle navigation menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+    </header>
+
+    <div class="mobile-menu-drawer">
+        <button class="close-drawer-btn">&times;</button>
+
+        <nav class="mobile-nav-links">
+            <a href="../index.html#about" class="nav-item-link">Back to About me</a>
+            <a href="../index.html#skills" class="nav-item-link">Back to Skills</a>
+            <a href="../index.html#projects" class="nav-item-link">Back to Projects</a>
+            <a href="../index.html#contact" class="nav-item-link">Contact</a>
+        </nav>
+
+        <div class="mobile-drawer-lang">
+            <a href="../_NLD/projects/Double_Pulsar_NL.html" class="mobile-lang-item">Nederlands <img src="https://flagcdn.com/w20/nl.png"
+                    alt="Netherlands Flag"></a>
+            <span class="drawer-lang-divider">|</span>
+            <a href="../_VIE/projects/Codename_Double_Pulsar_VN.html" class="mobile-lang-item"><img
+                    src="https://flagcdn.com/w20/vn.png" alt="Vietnam Flag"> Tiếng
+                Việt</a>
+        </div>
+    </div>
+
+    <div class="drawer-overlay"></div>
+
+    <div class="notion-cover-frame">
+        <img src="../img/Pulsar_Banner.png" alt="Project Banner Artwork" class="cover-img">
+    </div>
+
+    <main class="notion-page-container">
+
+        <header class="notion-page-header reveal-up">
+            <div class="notion-page-icon-wrapper">
+                <img src="../img/alienGreen_stand.png" alt="Project Token Icon" class="page-token-icon">
+            </div>
+
+            <span class="project-meta-category">Solo Game Designer & Development</span>
+
+            <h1 class="project-main-title">CODENAME DOULBE PULSAR</h1>
+        </header>
+
+        <section class="project-details-grid">
+
+            <div class="notion-textbox-card reveal-up">
+                <h3 class="textbox-card-title">IN SHORT</h3>
+                <p>
+                    Developed as a competitive intake assignment for <b>Breda University of Applied Sciences (BUas)</b>,
+                    Double Pulsar is a 2D side-scrolling platformer designed to demonstrate my core competency in
+                    analytical game design, rapid prototyping, and systemic intent.
+                    Facing severe asset constraints and unexpected technical physics hurdles, I executed a critical,
+                    mid-project design pivot—rebuilding the game from scratch to safeguard player experience against
+                    motion sickness and scope creep. This portfolio piece details how I prioritized a highly polished,
+                    functional design framework over flawed complexity, transforming a technical failure into a
+                    masterclass in risk management and player-centric onboarding.
+
+                    <br><br>To try out the game by yourself, please navigate to the <a
+                        href="https://koreaansebadman.itch.io/project-double-pulsar" target="_blank">Codename Double
+                        Pulsar itch.io
+                        page</a>.
+                </p>
+            </div>
+
+        </section>
+        <hr class="notion-divider reveal-up">
+
+        <h3 class="project-main-title">PROJECT OVERVIEW & CORE CONSTRAINTS</h3>
+        <section class="project-intro-chapter reveal-up">
+            <p>
+                The primary objective of the BUas intake assessment was not merely to deliver a finished game, but to
+                showcase a transparent, rigorous game design methodology. The evaluation focused heavily on the "why"
+                behind every design decision:
+                justifying mechanical choices, defining a clear game loop, ensuring intuitive progression visibility,
+                and establishing an empirical feedback loop through external playtesting.
+
+                <br><br>Relying on my four years of foundational experience, I selected Unity as my development
+                environment. The brief demanded a 1-to-3 level platformer bound by a rigid structural constraint: no
+                external custom art assets were allowed, restricting production strictly to self-made assets or the
+                open-source Kenney library.
+                Lacking professional art skills, I turned this limitation into a design driver. By analyzing the simple,
+                static animation frames available in the <a href="https://kenney.nl/assets" target="_blank">Kenney
+                    library</a>, I reverse-engineered my movement parameters. Instead of coding arbitrary physics and
+                forcing art to fit,
+                I tuned the acceleration, deceleration, and jump arcs to match the visual limits of the assets, ensuring
+                the player avatar felt like a highly reactive entity rather than an ungrounded geometric primitive.
+
+                <br><br>Choosing a 2D format allowed me to allocate more cognitive bandwidth to high-level system
+                concepting and documentation. However, this introduced a steep learning curve; my academic background
+                was predominantly 3D-focused, and I had zero formal experience in 2D level design.
+                To avoid creating arbitrary, unreadable pacing layouts, I deconstructed the environmental mechanics of
+                Blasphemous—specifically studying how it subtly teaches players mechanics through level geometry.
+                I then cross-referenced these case studies with collaborative peer workshops to draft my initial
+                structural pacing models.
+            </p>
+        </section>
+
+        <h3 class="project-main-title">PHASE 1: CONCEPTUALIZATION & SYSTEMIC INTENT</h3>
+        <section class="project-intro-chapter reveal-up">
+            <p>
+                Because the restricted art assets lacked complex combat animations, the gameplay depth had to be derived
+                entirely from systemic complexity rather than visceral action. I wanted to push past basic shapes like
+                cubes and circles to challenge myself to create an immersive, responsive feel even within tight
+                limitations.
+                The chosen core mechanical hook became Gravity Manipulation, where players navigate volatile
+                environments by exploiting low-gravity pockets to solve structural traversal puzzles.
+                <br><br>To anchor this mechanic, the narrative provided immediate player alignment: an astronaut
+                stranded in deep space must navigate perilous cosmic sectors to restore communication with their crew.
+                Inspired by the wind-propulsion mechanics in the <a href="https://www.youtube.com/watch?v=fwMZqzwrCGY"
+                    target="_blank">"Where Olive Trees Wither" zone of Blasphemous</a>, this simple narrative setup
+                answered the critical design question of player motivation <i>("Why must I cross this chasm?")</i>.
+                <br><br>The initial production roadmap mapped out a clean Tutorial ➔ Mastery pacing curve distributed
+                across three macro-environments:
+                <br><br><b>➔ Level 1 (Space Exterior)</b>: Introducing core movement parameters, camera tracking, and
+                basic low-gravity physics, culminating in unlocking a <i>Jetpack</i> gadget.
+                <br><b>➔ Level 2 (Asteroid Cavern)</b>: Escalating spatial difficulty through hazardous environmental
+                geometry, requiring players to master a <i>Double Jump</i> upgrade.
+                <br><b>➔ Level 3 (The Core)</b>: A systematic gauntlet requiring players to analyze randomized hazard
+                patterns, forcing them to combine all previously mastered upgrades to survive.
+            </p>
+        </section>
+
+
+        <!-- DYNAMIC MEDIA GALLERY GRID SECTION -->
+        <section class="project-media-gallery">
+
+            <div class="gallery-item span-2 reveal-up">
+                <img src="../img/Brief_1.png" alt="Project Brief 1" class="gallery-img">
+            </div>
+
+            <div class="gallery-item span-2 reveal-up">
+                <img src="../img/Brief_2.png" alt="Project Brief 2" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../img/Concept_2.jpg" alt="Concept Art 2" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../img/Concept_3.jpg" alt="Concept Art 3" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../img/Concept_4.jpg" alt="Concept Art 4" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../img/Concept_5.jpg" alt="Concept Art 5" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../img/Concept_6.jpg" alt="Concept Art 6" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../img/Concept_7.jpg" alt="Concept Art 7" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../img/Concept_8.jpg" alt="Concept Art 8" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../img/Concept_9.jpg" alt="Concept Art 9" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../img/Concept_10.jpg" alt="Concept Art 10" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../img/Concept_11.jpg" alt="Concept Art 11" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../img/Concept_12.jpg" alt="Concept Art 12" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../img//Concept_15.png" alt="Concept Art 12" class="gallery-img">
+            </div>
+
+        </section>
+
+        <h3 class="project-main-title">TECHNICAL FAILURE & THE CRITICAL PIVOT</h3>
+        <section class="project-intro-chapter reveal-up">
+            <p>
+                Once active production began on the low-gravity space prototype, the project suffered critical
+                mechanical complications.
+                My lack of advanced space-physics equations and rotational calculus resulted in a highly erratic camera
+                system and clumsy momentum controls.
+                A severe systemic bug continually zeroed out the player's velocity when transitioning between
+                independent asteroid gravity fields, stripping the gameplay of natural, fluid movement.
+
+                <br><br>More catastrophically, the prototype broke a fundamental prompt constraint: it had ceased to be
+                a true side-scroller. The dynamic rotating camera caused severe spatial disorientation and motion
+                sickness—a critical failure in UX design.
+                Recognizing that continuing down this path risked missing the hard deadline and failing the core project
+                requirements, I detached my ego from the concept and made the executive decision to scrap the prototype
+                entirely.
+
+                <br><br>This "trial by fire" taught me a vital industry lesson: the distinct line between theoretical
+                concept and practical execution. Risking a high-stakes project on unvetted, high-risk technical
+                mechanics can jeopardize an entire production cycle.
+
+                <br><br>Returning to a clean slate, I pivoted to a lower-risk, highly stable design: a traditional
+                side-scrolling framework reminiscent of Super Mario Bros, but adapted to my mechanical style.
+                I scaled down the scope but retained the core narrative and successful mechanics. Instead of deep-space
+                survival, the astronaut now navigated an abandoned facility.
+                To bridge my level design deficit under a tight deadline, I co-analyzed layout drafts with a peer,
+                dissecting how 2D levels establish structural flows before reshaping the final layouts into my own
+                unique design vision.
+
+                <br><br>The initial conceptual sketches were transformed directly into a structural roadmap, serving as
+                the definitive blueprint for the finalized level geometry.
+            </p>
+        </section>
+
+        <section class="project-media-gallery">
+
+            <div class="gallery-item span-2 reveal-up">
+                <img src="../img/Concept_1.png" alt="Concept 1" class="gallery-img">
+            </div>
+
+        </section>
+
+        <h3 class="project-main-title">ANALYSIS OF ONBOARDING & UI HIERARCHY</h3>
+        <section class="project-intro-chapter reveal-up">
+            <p>
+                Recognizing that a player’s initial interaction dictates their long-term engagement, I heavily
+                prioritized a low-friction onboarding experience for Level 1. The level layout directly mirrors the
+                initial conceptual sketch, transitioning from a paper blueprint into a fully functional introductory
+                environment.
+                Because onboarding requires safe spaces to practice mechanics, I opted for a "forgiving design"
+                philosophy: environmental hazards are minimized, and failing a platforming challenge never issues fatal
+                punishment. Instead, the level design routes players into organic failure loops where they can safely
+                retry and master the mechanics.
+
+                <br><br>This analytical approach to early pacing was validated during the playtesting phase, where
+                <b>100% of playtesters</b> successfully navigated the introductory stage without frustration or
+                technical confusion.
+
+                <br><br>
+
+                <b>Visual Tutorialization & UI Hierarchy</b>
+
+                <br><br>To complement this spatial onboarding, I adopted a strict <i>"show, don't tell"</i> framework
+                for the UI design. I bypassed heavy text descriptions for fundamental movement mechanics—such as
+                walking, jumping, and dashing—and instead integrated
+                minimalist, universal vector icons directly into the world environment. This structural choice reduced
+                cognitive overload, allowing players to immediately absorb contextual controls without halting their
+                gameplay momentum.
+
+                <br><br>For advanced, system-specific mechanics that required deeper explanation, I implemented
+                contextual tutorial panels.
+                These UI menus were stylistically inspired by the dark, immersive presentation windows found in
+                Blasphemous, balancing informative clarity with the game’s atmospheric facility aesthetic to keep the
+                player fully immersed even during onboarding moments.
+            </p>
+        </section>
+
+        <section class="project-media-gallery">
+
+            <div class="gallery-item span-2 reveal-up">
+                <img src="../img/Concept_35.png" alt="Tutorial design concept" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../img/Concept_17.png" alt="Tutorial design concept" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../img/Concept_20.png" alt="Tutorial design concept" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../img/Concept_25.png" alt="Tutorial design concept" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../img/Concept_28.png" alt="Tutorial design concept" class="gallery-img">
+            </div>
+
+        </section>
+
+        <h3 class="project-main-title">HAZARD INTEGRATION & SYSTEMIC DIFFICULTY SCALING</h3>
+        <section class="project-intro-chapter reveal-up">
+            <p>
+                To prevent the standardized side-scrolling loop from becoming flat or monotonous, I introduced
+                structural environmental hazards and static enemies to inject mechanical tension and layer tactical
+                depth.
+                These elements included classic platforming hurdles such as moving saw blades, automated
+                projectiles/turrets, and hazardous toxic waste zones.
+
+                <br><br>Rather than deploying these traps arbitrarily, I utilized a compound design methodology. Hazards
+                were introduced individually in safe contexts for player acclimation, then layered dynamically to create
+                complex spatial puzzles.
+
+                <br><br>This architecture culminated in Level 3—the game's design climax—where all hazardous elements
+                converged systematically.
+                This forced players to synchronize their movement mechanics, requiring high-velocity reflexes and
+                precise timing to navigate structural gauntlets without triggering a punishing "domino effect" of
+                consecutive damage.
+                The final layout offered an optimized balance in difficulty tuning—delivering an experience that is
+                accessible to newcomers yet engaging for experienced platformer players.
+            </p>
+        </section>
+
+        <h3 class="project-main-title">PLAYTESTING, AUDIENCE DIVERSITY & ITERATION</h3>
+        <section class="project-intro-chapter reveal-up">
+            <p>
+                A game cannot be considered functionally complete until it has survived external playtesting. Developing
+                in a vacuum creates a developer blind spot, raising the probability of encountering critical bugs and
+                disjointed user experiences. To satisfy the strict requirements of the BUas intake assignment and
+                eliminate bias,
+                I conducted a structured playtest pipeline utilizing a diverse demographic of seven external
+                participants, completely disconnected from the project's development.
+
+                <br><br>To test the accessibility of my onboarding systems, I selected a wide target demographic ranging
+                from young adults (ages 18–20) to older users (over age 60).
+                This broad spectrum allowed me to measure control legibility and mechanical comprehension across varying
+                degrees of gaming literacy.
+
+                <br><br>The empirical data collected from these sessions was instrumental in refining the final build:
+                <br>
+                <br><b>➔ The Early Phase (Friction Points)</b>: The first two playtesters encountered game-breaking bugs
+                and physics inconsistencies that significantly disrupted their experience. I treated these failures as
+                critical telemetry, halting the tests to implement immediate technical hotfixes.
+                <br><b>➔ The Late Phase (Validation)</b>: Following these adjustments, the remaining five testers
+                reported high satisfaction, navigating the levels fluidly and confirming that the progression curve felt
+                natural yet engaging.
+            <div
+                style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 550px; margin: 20px auto; padding: 20px; background-color: #1e1e24; border-radius: 8px; border: 1px solid #3a3a42; color: #e0e0e6; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+
+                <!-- Step 1 -->
+                <div
+                    style="display: inline-block; padding: 10px 18px; background-color: #2e2e38; border: 2px solid #6c5ce7; border-radius: 6px; font-weight: bold; letter-spacing: 0.5px; color: #a29bfe;">
+                    [ Playtest Session ]
+                </div>
+
+                <!-- Connector 1 -->
+                <div style="width: 2px; height: 25px; background-color: #6c5ce7; margin: 0 auto;"></div>
+
+                <!-- Split Bar -->
+                <div style="width: 70%; height: 2px; background-color: #6c5ce7; margin: 0 auto;"></div>
+
+                <!-- Side Connectors -->
+                <div style="width: 70%; margin: 0 auto; display: flex; justify-content: space-between;">
+                    <div style="width: 2px; height: 20px; background-color: #6c5ce7;"></div>
+                    <div style="width: 2px; height: 20px; background-color: #6c5ce7;"></div>
+                </div>
+
+                <!-- Split Content -->
+                <div style="display: flex; justify-content: space-between; width: 90%; margin: 0 auto; gap: 15px;">
+                    <!-- Left Column -->
+                    <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+                        <div
+                            style="padding: 8px 12px; background-color: #2d1f2d; border: 1px solid #ff7675; border-radius: 4px; font-size: 0.9em; font-weight: 600; color: #ff7675; width: 100%;">
+                            [ 2 Early Testers ]
+                        </div>
+                        <div style="width: 2px; height: 15px; background-color: #ff7675; opacity: 0.6;"></div>
+                        <div style="font-size: 0.85em; color: #d63031; line-height: 1.3;">
+                            Critical Bugs Exposed
+                        </div>
+                        <div style="width: 2px; height: 15px; background-color: #ff7675; opacity: 0.6;"></div>
+                        <div
+                            style="padding: 8px 12px; background-color: #222f3e; border: 1px solid #54a0ff; border-radius: 4px; font-size: 0.85em; font-weight: 600; color: #54a0ff; width: 100%;">
+                            [ Hotfixes & Tuning ]
+                        </div>
+                    </div>
+
+                    <!-- Link Arrow (Left to Right) -->
+                    <div
+                        style="display: flex; align-items: flex-end; padding-bottom: 12px; color: #54a0ff; font-size: 1.2em; font-weight: bold;">
+                        ➔
+                    </div>
+
+                    <!-- Right Column -->
+                    <div
+                        style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: space-between;">
+                        <div
+                            style="padding: 8px 12px; background-color: #1f2d24; border: 1px solid #55efc4; border-radius: 4px; font-size: 0.9em; font-weight: 600; color: #55efc4; width: 100%;">
+                            [ 5 Later Testers ]
+                        </div>
+                        <div style="width: 2px; height: 15px; background-color: #55efc4; opacity: 0.6;"></div>
+                        <div style="font-size: 0.85em; color: #00b894; line-height: 1.3;">
+                            100% Completion Rate
+                        </div>
+                        <div style="width: 2px; height: 15px; background-color: #55efc4; opacity: 0.6;"></div>
+                        <div
+                            style="padding: 8px 12px; background-color: #1f2d24; border: 1px solid #55efc4; border-radius: 4px; font-size: 0.85em; font-weight: 600; color: #55efc4; width: 100%;">
+                            Fluid Progression
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </p>
+        </section>
+
+        <section class="project-media-gallery">
+
+            <div class="gallery-item reveal-up">
+                <video src="../Video/Double Pulsar playtest.mp4" alt="Playtest video 1" class="gallery-img" controls>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <video src="../Video/Double Pulsar playtest 2.mp4" alt="Playtest video 2" class="gallery-img" controls>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <video src="../Video/Double Pulsar Playtest 3.mp4" alt="Playtest video 3" class="gallery-img" controls>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <video src="../Video/Double Pulsar before and after 1.mp4" alt="Before and after comparison 1"
+                    class="gallery-img" controls>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <video src="../Video/Double Pulsar before and after 2.mp4" alt="Before and after comparison 2"
+                    class="gallery-img" controls>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <video src="../Video/Double Pulsar Before and After - 3.mp4" alt="Before and after comparison 3"
+                    class="gallery-img" controls>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <video src="../Video/Double Pulsar before and after 4.mp4" alt="Before and after comparison 4"
+                    class="gallery-img" controls>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+        </section>
+
+        <h3 class="project-main-title">CONCLUSION & PERSONAL REFLECTION</h3>
+        <section class="project-intro-chapter reveal-up">
+            <p>
+                This documentation archives the complete evolutionary arc of Double Pulsar, showcasing the reality of
+                independent game production.
+                By mapping out initial conceptual flaws, documenting critical technical failures, and detailing the
+                systemic pivots that secured the final product, this project serves as concrete evidence of my readiness
+                for advanced game design study.
+                <br><br>It explicitly demonstrates my capacity for objective self-critique, my understanding of player
+                psychology, and my willingness to confidently scrap a flawed prototype to protect the ultimate user
+                experience. This journey has firmly established my foundational belief that great game design is not a
+                product of first impulses, but a structured framework forged through relentless, disciplined iteration.
+            </p>
+        </section>
+
+        <section class="project-details-grid">
+
+            <div class="notion-textbox-card reveal-up">
+                <h3 class="textbox-card-title">01 / Ego Detachment & Scope Control</h3>
+                <p>Demonstrated the professional maturity required to kill a flawed prototype early. By prioritizing
+                    user health (mitigating motion sickness) and deadline security over personal investment,
+                    I successfully insulated the project from fatal scope creep.</p>
+            </div>
+
+            <div class="notion-textbox-card reveal-up">
+                <h3 class="textbox-card-title">02 / Constraint-Driven Reverse Engineering</h3>
+                <p>Transformed a severe art asset deficit into a mechanical strength. Designing character movement
+                    formulas around the literal frame-counts of the available Kenney assets ensured a tight, responsive
+                    gameplay loop.</p>
+            </div>
+
+            <div class="notion-textbox-card reveal-up">
+                <h3 class="textbox-card-title">03 / Data-Driven Polish & Iteration</h3>
+                <p>Established a structured, multi-generational playtesting model that stripped away developer bias,
+                    translating raw user friction and early build telemetry into objective, balance-improving hotfixes.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- WORK LOGOS FOOTER -->
+    <footer class="logo-footer reveal-up">
+        <div class="footer-logo-container">
+            <img src="../img/DP_2.png" alt="Double Pulsar" class="footer-logo-img reveal-up">
+            <img src="../img/Canberra.png" alt="Project Canberra" class="footer-logo-img reveal-up">
+            <img src="../img/Orka.png" alt="Codename G.A.T.E" class="footer-logo-img reveal-up">
+            <img src="../img/Hyphen_2.png" alt="Bug Studio Logo" class="footer-logo-img reveal-up">
+            <img src="../img/Rigidbirdy.png" alt="Project Rigidbirdy" class="footer-logo-img reveal-up">
+        </div>
+
+        <footer class="logo-footer">
+            <div class="footer-bottom">
+                <p class="footer-credit-text">
+                    Wyzard'sArk 2017-<span id="current-year">2026</span> | Artwork by Rouse Cards (Kamen Rider Blade ©
+                    Toei Co., Ltd.)
+                </p>
+            </div>
+        </footer>
+    </footer>
+
+    <script src="../script/script.js"></script>
+
+
+    <!-- LIGHTBOX MODAL OVERLAY -->
+    <div id="image-lightbox" class="lightbox-overlay" aria-hidden="true">
+        <span class="lightbox-close-btn">&times;</span>
+        <img class="lightbox-display-img" id="lightbox-target-img" src="" alt="Fullscale view">
+    </div>
+</body>
+
+</html>
