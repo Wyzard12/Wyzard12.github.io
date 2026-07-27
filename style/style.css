@@ -1,0 +1,1246 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Target your main sections by their IDs */
+#main,
+#about, 
+#skills, 
+#projects,
+#contact {
+    /* Adjust this value (e.g., 60px to 80px) depending on how tall your compact nav box is */
+    scroll-margin-top: 80px; 
+}
+
+/* --- REVEAL ON SCROLL ANIMATION --- */
+
+/* The initial state (hidden & shifted down) */
+.footer-logo-container .footer-logo-img.reveal-up,
+.reveal-up {
+    opacity: 0 !important; /* Force opacity to 0 on page load */
+    transform: translateY(40px); /* Positioned slightly lower */
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, opacity;
+}
+
+/* 2. THE VISIBLE STATE WHEN SCROLLED TO */
+.footer-logo-container .footer-logo-img.reveal-up.is-visible,
+.reveal-up.is-visible {
+    opacity: 1 !important; /* Rise up to full visibility */
+    transform: translateY(0); /* Return to its original position */
+}
+
+body {
+    background-color: #F4EFEA;
+    color: #111827;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    padding: 1px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* Clean white canvas background matching your styling */
+    box-sizing: border-box;
+    position: sticky; /* Optional: keeps your menu locked to top of window when scrolling */
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.logo img {
+    height: 90px; /* Adjust scale height to match layout context */
+    width: auto;
+    display: block;
+}
+
+/* Center Navigation Links container */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Balanced spacing between individual menu targets */
+}
+
+.nav-item-link {
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #111827;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+/* Clean, modern lower accent hover indicator line */
+.nav-item-link::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: #111827;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-item-link:hover {
+    color: #666666;
+}
+
+.nav-item-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Container holding the language selection layout */
+.lang-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: sans-serif;
+    font-size: 0.95rem;
+}
+
+/* Individual language link item */
+.lang-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #111827;
+}
+
+/* Controls the scaling and rendering of the flag image */
+.flag-icon {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+.divider {
+    color: #cccccc;
+    margin: 0 4px;
+    user-select: none;
+}
+
+/* --- Hero Section Container --- */
+.hero-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Changed from flex-start to center vertically if height allows */
+    align-items: center;
+    width: 100%;
+    
+    /* PUSH DOWN THE INTRO: Increased top padding to shift the top elements downward */
+    padding-top: 140px; 
+    
+    /* CREATE BREATHING ROOM BELOW: Gives a big safety gap before the About Me section starts */
+    padding-bottom: 120px; 
+    
+    box-sizing: border-box;
+}
+
+.portfolio-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    
+    /* This negative translate shifts the alignment visually, 
+       tweak or reduce it if you want the text even lower! */
+    transform: translateY(-20px); 
+}
+
+/* Typography & Layering (z-index) */
+.title-top {
+    font-family: 'Playfair Display', Georgia, serif; 
+    /* INCREASED SIZE: clamp max raised from 6rem to 8rem */
+    font-size: clamp(4rem, 10vw, 8rem); 
+    font-weight: 400;
+    z-index: 3; /* Keeping it behind the image wrapper */
+    margin-bottom: -55px; /* Increased overlap to match the larger font size */
+}
+
+.title-bottom {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+    /* INCREASED SIZE: clamp max raised from 7rem to 9.5rem */
+    font-size: clamp(3.5rem, 14vw, 9.5rem); 
+    font-weight: 400;
+    letter-spacing: 2px;
+    z-index: 3; /* Kept on top of the image wrapper */
+    margin-top: -85px; /* Increased overlap to blend smoothly with larger image scale */
+}
+
+/* The Tilted Image Frame */
+.image-wrapper {
+    /* INCREASED DIMENSIONS: Bushed up scale width and height dimensions */
+    width: 360px;   /* Up from 280px */
+    height: 260px;  /* Up from 200px */
+    overflow: hidden;
+    transform: rotate(-2deg); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Enhanced the shadow drop slightly */
+    z-index: 2; 
+    border: 4px solid #fff; 
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 140%;
+    object-fit: cover; 
+    transform: scale(1.1); 
+}
+
+/* Subtitle at the very bottom */
+.subtitle {
+    font-size: 1.1rem; /* Marginally padded to match the large hero structure text */
+    letter-spacing: 1.5px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Mobile Layout Collapse Optimization */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 4%;
+    }
+    .nav-links {
+        gap: 20px; 
+    }
+    .nav-item-link {
+        font-size: 0.9rem;
+    }
+    /* Restrain image frame scale on smaller mobile devices */
+    .image-wrapper {
+        width: 260px;
+        height: 190px;
+    }
+    .title-top {
+        margin-bottom: -35px;
+    }
+    .title-bottom {
+        margin-top: -55px;
+    }
+}
+
+/* ==========================================================================
+   MOBILE MENU & HAMBURGER STYLING
+   ========================================================================== */
+
+/* Initially hide mobile explicit elements on desktop layouts */
+.mobile-burger-btn, 
+.mobile-menu-drawer, 
+.drawer-overlay {
+    display: none;
+}
+
+/* Responsive breakpoint for mobile screens */
+@media (max-width: 768px) {
+    /* Hide the cluttered wide horizontal structures */
+    .header .nav-links, 
+    .header .lang-selector {
+        display: none;
+    }
+
+    /* Reveal the clean interactive Hamburger Button */
+    .mobile-burger-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 18px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+    }
+
+    .burger-line {
+        width: 100%;
+        height: 2px;
+        background-color: #111827;
+        transition: all 0.3s ease;
+    }
+
+    /* The Slide-Out Side Panel Drawer Frame Layout */
+    .mobile-menu-drawer {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px; /* Adjust thickness footprint width */
+        height: 100vh;
+        background-color: #F4EFEA; /* Soft light grey tint from your sketch */
+        z-index: 2000;
+        padding: 40px 30px;
+        box-sizing: border-box;
+        
+        /* Slide hidden state: shifts out past the screen bounds on right boundary edge */
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: -5px 0 25px rgba(0,0,0,0.05);
+    }
+
+    /* Trigger active state class to slide drawer onto viewport canvas */
+    .mobile-menu-drawer.is-open {
+        transform: translateX(0);
+    }
+
+    /* Elegant Close button 'X' positioning properties */
+    .close-drawer-btn {
+        align-self: flex-start;
+        background: none;
+        border: none;
+        font-size: 2.2rem;
+        font-weight: 300;
+        line-height: 1;
+        cursor: pointer;
+        color: #111827;
+        margin-bottom: 60px;
+        padding: 0;
+    }
+
+    /* Vertical Navigation Stack Menu Link Alignment */
+    .mobile-nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        flex-grow: 1; /* Pushes the lower language block downward */
+    }
+
+    .mobile-nav-item {
+        font-family: sans-serif;
+        font-size: 1.8rem; /* Prominent clear item touch targets */
+        font-weight: 500;
+        color: #111827;
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+    }
+
+    .mobile-nav-item:hover {
+        opacity: 0.6;
+    }
+
+    /* Drawer Lower Floor Language Bar Row formatting */
+    .mobile-drawer-lang {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: auto;
+        padding-bottom: 20px;
+    }
+
+    .mobile-lang-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-family: sans-serif;
+        font-size: 0.95rem;
+        color: #111827;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .mobile-lang-item img {
+        border-radius: 2px;
+        vertical-align: middle;
+    }
+
+    .drawer-lang-divider {
+        color: #aaaaaa;
+        user-select: none;
+    }
+
+    /* Dimmed screen backdrop display layout logic */
+    .drawer-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.2); /* Soft clean focus shadow shield layer */
+        z-index: 1999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+    }
+
+    .drawer-overlay.is-visible {
+        display: block;
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Divider Line --- */
+.section-divider {
+    border: none;
+    border-top: 1px solid #000000;
+    width: 40%;
+    
+    /* Reduced from 80px to 40px to shrink the gap significantly */
+    margin: 30px auto; 
+}
+
+/* --- About Section Layout --- */
+.about-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    
+    /* Reduced bottom padding from 100px to 40px */
+    padding: 0 40px 40px 40px; 
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    
+    /* Change this from 'start' to 'center' */
+    align-items: center; 
+}
+
+/* --- Left Side Styling --- */
+.about-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-number {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem); /* Scales beautifully based on screen size */
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 60px; /* Pushes the bio text down to create that asymmetrical look */
+}
+
+.about-text {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #222;
+    max-width: 420px;       /* Keeps text lines readable and forces it to tuck nicely */
+    align-self: flex-end;   /* Nudges the text toward the center-right of its column */
+}
+
+.highlight-orange {
+    color: #E67E22;         /* Matches the custom orange color for "SintLUCAS" */
+    font-weight: 500;
+}
+
+
+/* --- Right Side (Gallery) Styling --- */
+.about-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;              /* Spacing between the top and bottom images */
+}
+
+.about-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.gallery-img-1 {
+    max-width: 450px;       /* Keeps sizing close to image_530d43.jpg */
+}
+
+.gallery-img-2 {
+    max-width: 380px;
+    align-self: flex-end;   /* Matches the sample layout by stepping the second image inward */
+}
+
+/* --- Responsive Adjustments for Mobile --- */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr; /* Switch to a single column on tablet/mobile */
+        gap: 40px;
+    }
+    
+    .about-text {
+        align-self: flex-start; /* Reset alignment on mobile for natural reading flow */
+    }
+    
+    .gallery-img-2 {
+        align-self: flex-start; /* Pulls the second image back in line on mobile */
+    }
+    
+    .section-title {
+        margin-bottom: 20px;    /* Shrinks the gap between title and text on small screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   UPDATED ASYMMETRIC SKILLS & EDUCATION GRID
+   ========================================================================== */
+
+.skills-experience-section {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+/* Base side-by-side grid template split */
+.skills-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Split down the exact middle matching your wireframe */
+    gap: 60px; /* Generous breathing room space between columns */
+    align-items: flex-start;
+}
+
+/* Main Column Section Typography Headers */
+.section-column-title {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #111111;
+    margin-bottom: 35px;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+    width: max-content;
+}
+
+/* --- Left Side Timeline Card List Layout Items --- */
+.timeline-items-group {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.timeline-card-item {
+    position: relative;
+    padding-left: 15px;
+    border-left: 2px solid #e0e0e0; /* Subtle timeline tracker layout line */
+}
+
+.timeline-date-tag {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #8c8c8c;
+    letter-spacing: 0.5px;
+}
+
+.timeline-degree-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #222222;
+    margin: 4px 0;
+}
+
+.timeline-institution-name {
+    font-size: 0.95rem;
+    color: #555555;
+    margin: 0;
+}
+
+/* --- Right Side Content Stack formatting --- */
+.skills-content-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* Dynamic Skill Pill Tag cluster blocks */
+.skills-tags-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-pill-tag {
+    background-color: #f4f4f4;
+    color: #333333;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #e8e8e8;
+}
+
+/* Shoved down experience text formatting box */
+.experience-summary-box p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #444444;
+    margin: 0;
+}
+
+/* ==========================================================================
+   MOBILE DESIGN LAYOUT COLLAPSE
+   ========================================================================== */
+@media (max-width: 768px) {
+    .skills-grid-container {
+        /* Collapse side columns neatly into a vertical single line track feed on phones */
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .skills-experience-section {
+        padding: 0 24px;
+        margin: 50px auto;
+    }
+    
+    .section-column-title {
+        margin-bottom: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Project Intro Section Layout --- */
+.project-intro-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    
+    /* Reduced bottom padding from 120px to 40px */
+    padding: 60px 40px 40px 40px; 
+}
+
+.intro-container {
+    display: grid;
+    /* Keeps the 3 balanced columns framework */
+    grid-template-columns: 1fr 1.2fr 1fr; 
+    gap: 40px;
+    align-items: center;
+}
+
+/* --- Staggered Visual Alignment --- */
+.intro-art-left {
+    align-self: flex-start; /* Pushes the left image up to the top */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.intro-art-right {
+    align-self: flex-end; /* Pulls the right image down to the bottom */
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px; /* Adds a bit extra offset to match the Canva flow */
+}
+
+.intro-img {
+    max-width: 200px; /* Adjust based on how large your game asset renders */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* --- Shifted Slogan Text Block --- */
+.intro-text-block {
+    display: flex;
+    flex-direction: column;
+    
+    /* Pushes the entire text block to the right edge of its grid column */
+    justify-self: end; 
+    
+    /* Aligns the individual lines of text to the right instead of center */
+    text-align: right; 
+    align-items: flex-end; 
+
+    /* Nudges the text a bit more into the right zone. 
+       Adjust this pixel number up or down to make it look exactly right! */
+    margin-right: -60px; 
+}
+
+.slogan-line {
+    display: block;
+    font-size: clamp(3rem, 7vw, 5rem); /* Scales smoothly across sizes */
+    line-height: 1.1;
+}
+
+/* Using your Canva Arimo font configuration */
+.line-arimo {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Using your Canva Arsenica font configuration */
+.line-arsenica {
+    font-family: 'Arsenica', 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    font-style: italic; /* Applies the elegant slant seen on "FOR" */
+    margin: 5px 0;
+}
+
+/* --- Responsive Layout for Mobile views --- */
+@media (max-width: 768px) {
+    .intro-container {
+        grid-template-columns: 1fr; /* Collapses into a clean vertical stack on mobile phones */
+        gap: 50px;
+    }
+    .intro-text-block {
+        /* Resets text to center beautifully on vertical mobile displays */
+        justify-self: center;
+        text-align: center;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .intro-art-left, 
+    .intro-art-right {
+        align-self: center; /* Aligns artwork center natively on mobile */
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    
+    /* Reorders elements so the text statement displays first on mobile screens */
+    .intro-art-left { order: 1; }
+    .intro-text-block { order: 2; }
+    .intro-art-right { order: 3; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Projects Section Main Container --- */
+.projects-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px 120px 40px;
+
+    padding: 10px 40px 120px 40px;
+}
+
+.projects-header {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- The 3-Column Main Grid Layout --- */
+.projects-grid {
+    display: grid;
+    /* Creates 3 equally distributed transparent columns */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; /* Adjust spacing between cards */
+}
+
+/* --- Individual Card Layout --- */
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Remove default underline and text color shifts from the card link container */
+.project-card a {
+    text-decoration: none;
+    color: inherit; /* This forces the text inside to keep its original color choices */
+    display: block; /* Ensures the whole card area remains completely clickable */
+}
+
+/* Constrains aspect ratios to a tidy box container */
+.project-image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: #f5f5f5; /* Light fallback placeholder tint */
+}
+
+.project-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops center beautifully without squash or stretching */
+    transition: transform 0.5s ease; /* Adds a premium smooth hover zoom effect */
+}
+
+/* Hover micro-interaction to bring the grid alive */
+.project-card:hover .project-image-wrapper img {
+    transform: scale(1.08);
+}
+
+/* --- Typography (Canva System Sync) --- */
+.project-card-title {
+    font-family: 'Arsenica', 'Cormorant Garamond', Georgia, serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #111827;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.project-card-desc {
+    font-family: 'Arimo', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #555555;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    text-transform: uppercase; /* Automatically handles all-caps translation for you */
+}
+
+/* Ensure the text elements have relative positioning so the underline aligns perfectly */
+.project-card-title,
+.project-card-desc {
+    position: relative;
+    display: inline-block; /* Restrains the underline width to just the length of the text words */
+    width: auto;
+}
+
+/* 1. Create the hidden sliding underline baseline template */
+.project-card-title::after,
+.project-card-desc::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;          /* Positions the line slightly below the text baseline */
+    width: 100%;
+    height: 2px;           /* Thickness of your sliding underline line */
+    background-color: currentColor; /* Matches the text color dynamically (White/Black/Accent) */
+    
+    /* Setup the initial transformation point anchored to the left side */
+    transform: scaleX(0);
+    transform-origin: left;
+    
+    /* Handles the smooth sliding timing animation curve */
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* 2. Slide IN (Expand to full width) when the parent card container is hovered */
+.project-card:hover .project-card-title::after,
+.project-card:hover .project-card-desc::after {
+    transform: scaleX(1);
+}
+
+/* 3. Slide OUT (Shrink away) smoothly when mouse exits */
+.project-card:not(:hover) .project-card-title::after,
+.project-card:not(:hover) .project-card-desc::after {
+    transform-origin: right; /* Forces it to continue sliding out to the right side! */
+}
+
+/* --- Responsive Adaptation Breakdown --- */
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* Drop down to two columns on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Spreads cards full width across small mobile screens */
+        gap: 45px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Other Projects Section Grid --- */
+.ticker-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px 40px 120px 40px;
+}
+
+.ticker-header {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ticker-subtitle {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #555555;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+/* Responsive grid container for the cards */
+.other-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    width: 100%;
+}
+
+/* --- Cards Styling --- */
+.ticker-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Keeps cards cleanly square */
+    overflow: hidden;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.ticker-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* --- Hover Dark Overlay & Title Pop-up --- */
+.ticker-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 24, 39, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.4s ease;
+    padding: 20px;
+}
+
+.ticker-card-title {
+    color: #F4EFEA;
+    font-family: 'Arimo', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    transform: translateY(15px);
+    transition: transform 0.4s ease;
+}
+
+/* --- Mouse Hover Trigger States --- */
+.ticker-card:hover .ticker-overlay {
+    opacity: 1;
+}
+
+.ticker-card:hover .ticker-card-title {
+    transform: translateY(0);
+}
+
+.ticker-card:hover img {
+    transform: scale(1.05);
+}
+
+/* --- Responsive Layout Adjustments --- */
+@media (max-width: 968px) {
+    .other-projects-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 650px) {
+    .other-projects-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   CONTACT SECTION STYLING
+   ========================================================================== */
+.contact-section {
+    width: 100%;
+    /* 1. REDUCE PADDING: Dropped top padding from 100px to 30px to close the empty void */
+    padding: 30px 10% 100px 10%; 
+    background-color: #F4EFEA;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Left Content Area */
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-title {
+    font-family: sans-serif;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    /* 2. TIGHTEN MARGINS: Cleared out block space above the title text */
+    margin: 10px 0 40px 0; 
+    color: #111827;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.contact-link, .contact-text {
+    font-family: serif; /* Matches the editorial serif font variant in the image */
+    font-size: 1.6rem;
+    color: #111827;
+    text-decoration: none;
+    margin: 0;
+    transition: opacity 0.2s ease;
+}
+
+.contact-link:hover {
+    opacity: 0.6;
+}
+
+/* Book A Call Button Variant */
+.book-call-btn {
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: #111827;
+    background-color: #5dfdca; /* Soft grey button badge styling */
+    padding: 14px 32px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.book-call-btn:hover {
+    background-color: #dcdcdc;
+}
+
+/* Right Side Image Block with Perspective Tilting */
+.contact-image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-profile-img {
+    width: 85%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    /* Rotates the image counter-clockwise slightly to create the asymmetry layout */
+    transform: rotate(-6deg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ==========================================================================
+   WORK LOGOS FOOTER
+   ========================================================================== */
+.logo-footer {
+    width: 100%;
+    padding: 10px 10%;
+    background-color: #F4EFEA;
+    box-sizing: border-box;
+}
+
+.footer-logo-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-logo-img {
+    height: clamp(50px, 5vw, 90px); /* Fluid sizing keeps logos proportional on smaller screens */
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%); /* Keeps images consistently monochromatic and cleanly balanced */
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.footer-logo-img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Container block formatting for the footer credits */
+.footer-bottom {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 0 auto; /* Creates clean separation space below your logos */
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0; /* Thin, soft line separating logos from credits */
+    text-align: center;
+}
+
+/* Highly readable, clean legal caption text properties */
+.footer-credit-text {
+    font-family: sans-serif;
+    font-size: 0.7rem;
+    color: #888888; /* A muted gray tone keeping the aesthetic ultra-clean */
+    letter-spacing: 0.5px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsive adjustment for mobile displays */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+    }
+    
+    .contact-content {
+        align-items: center;
+    }
+    
+    .contact-profile-img {
+        transform: rotate(0deg); /* Straightens the image out nicely on mobile layouts */
+        width: 100%;
+    }
+    
+    .footer-logo-container {
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+        padding-top: 15px;
+    }
+    .footer-credit-text {
+        font-size: 0.75rem;
+        padding: 0 10px;
+    }
+}
+

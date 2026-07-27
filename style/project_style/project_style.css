@@ -1,0 +1,407 @@
+/* ==========================================================================
+   NOTION-INSPIRED PROJECT DETAIL LAYOUT SYSTEM
+   ========================================================================== */
+
+body {
+    background-color: #F4EFEA;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333333;
+}
+
+/* --- 1. NOTION-STYLE COVER BANNER FRAME --- */
+.notion-cover-frame {
+    width: 100%;
+    height: 35vh;          /* Slightly increased from 32vh to show more artwork */
+    min-height: 280px;     /* Increased from 220px to prevent desktop squishing */
+    max-height: 380px;     /* Caps it on massive monitors so it doesn't take over the screen */
+    background-color: #f5f5f5;
+    overflow: hidden;
+    position: relative;
+}
+
+.notion-cover-frame .cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Ensures the image scales from the exact middle */
+}
+
+/* --- 2. CORE CENTRAL RESTRAINED PAGE BLOCK CANVAS --- */
+.notion-page-container {
+    width: 100%;
+    max-width: 840px; /* Restrained block layout canvas width maximize scannability */
+    margin: 0 auto;
+    padding: 0 40px 100px 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* --- 3. FLOATING PAGE TOKEN ICON POSITIONING --- */
+.notion-page-header {
+    position: relative;
+    margin-top: -60px; /* Negative layout pull pulling token box over background */
+    margin-bottom: 35px;
+    z-index: 10;
+}
+
+.notion-page-icon-wrapper {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.page-token-icon {
+    width: 120%;
+    height: 120%;
+    object-fit: contain;
+}
+
+/* --- 4. CATEGORY & PROJECT HEADINGS --- */
+.project-meta-category {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8c8c8c;
+    margin-bottom: 8px;
+}
+
+.project-main-title {
+    /* 1. DYNAMIC SCALING: Clamps the font size smoothly between a min and max */
+    /* Min size: 1.8rem, Responsive size: 4.5% of viewport width, Max size: 2.8rem */
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    
+    /* 2. PREMIUM SPACING DEFENSE */
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #111e30; /* Matches your dark text color */
+    
+    /* 3. SAFETY NET FOR EXTRA LONG WORDS */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    
+    /* Allows the browser to inject a clean soft hyphen break if a massive word overflows */
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    
+    width: 100%;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* --- 5. ALINEA HOOFDSTUK (INTRO PARAGRAPH) --- */
+.project-intro-chapter {
+    margin-bottom: 40px;
+}
+
+.project-intro-chapter p {
+    font-size: 1.25rem;
+    line-height: 1.65;
+    color: #4a4a4a;
+    margin: 0;
+}
+
+/* Ensure inline links within the introduction chapters have proper stacking contexts */
+.project-intro-chapter p a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit; /* Keeps your current link text color intact */
+    font-weight: 600; /* Gives it a slight bold weight to make it pop */
+}
+
+/* 1. Create the hidden sliding underline baseline template */
+.project-intro-chapter p a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;          /* Tucked closely beneath text characters */
+    width: 100%;
+    height: 2px;           /* Line thickness */
+    background-color: currentColor; /* Inherits text color dynamically */
+    
+    /* Animation base state set to the left edge */
+    transform: scaleX(0);
+    transform-origin: left;
+    
+    /* Clean, premium transition timing curve matching your cards */
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* 2. Slide IN (Expand left-to-right) when the link itself is hovered */
+.project-intro-chapter p a:hover::after {
+    transform: scaleX(1);
+}
+
+/* 3. Slide OUT (Continue out to the right) when the mouse exits */
+.project-intro-chapter p a:not(:hover)::after {
+    transform-origin: right; /* Forces continuous directional motion escape */
+}
+
+.notion-divider {
+    border: 0;
+    height: 1px;
+    background-color: #000000;
+    margin: 40px 0;
+}
+
+/* --- 6. STRUCTURAL TEXTBOX CARDS DISPLAY GRID --- */
+.project-details-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Clean structured stack layout spacing */
+}
+
+.notion-textbox-card {
+    background-color: #0F1E36;
+    border-radius: 8px;
+    padding: 24px 30px;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.notion-textbox-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+/* --- Polished Inline Text Links --- */
+.notion-textbox-card a { /* <--- Replace with your actual text wrapper class/ID */
+    color: #F4EFEA; /* Cream/white color to perfectly match your outer site theme */
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 2px;
+    border-bottom: 1px dashed rgba(244, 239, 234, 0.4); /* Subtle underline style */
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Elegant, responsive hover states */
+.notion-textbox-card a:hover {
+    color: #FFB84D; /* A soft, warm gold/amber accent highlight color */
+    border-bottom: 1px solid #FFB84D;
+    cursor: pointer;
+}
+
+.textbox-card-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #F4EFEA;
+    margin: 0 0 10px 0;
+}
+
+.notion-textbox-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #F4EFEA;
+    margin: 0;
+}
+
+/* ==========================================================================
+   MOBILE COLLAPSE RESPONSIVE ADAPTATIONS
+   ========================================================================== */
+@media (max-width: 768px) {
+    .notion-cover-frame {
+        height: 22vh;
+    }
+    .notion-page-container {
+        padding: 0 24px 60px 24px;
+    }
+    .notion-page-header {
+        margin-top: -45px;
+    }
+    .notion-page-icon-wrapper {
+        width: 75px;
+        height: 75px;
+        border-radius: 12px;
+        margin-bottom: 16px;
+    }
+    .project-main-title {
+        font-size: 1.5rem;
+    }
+    .project-intro-chapter p {
+        font-size: 1.1rem;
+    }
+    .notion-textbox-card {
+        padding: 20px 24px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   DYNAMIC MEDIA GALLERY GRID
+   ========================================================================== */
+
+.project-media-gallery {
+    display: grid;
+    /* Creates a flexible 2-column core structural layout split */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 16px; /* Uniform grid line spacing matching your image_c8d92b draft */
+    margin: 40px 0;
+    width: 100%;
+}
+
+/* Base formatting for every item container inside the grid */
+.gallery-item {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    border-radius: 6px; /* Subtle modern rounding matching Notion's style */
+}
+
+/* Force media contents to adapt fluidly to their grid cells */
+.gallery-item img,
+.gallery-item video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps media content from stretching distortively */
+}
+
+/* Explicit Video handling settings */
+.gallery-item video {
+    background-color: #000;
+    aspect-ratio: 16 / 9; /* Sets a clean widescreen default baseline */
+}
+
+/* HELPER CLASSES FOR DYNAMIC LAYOUTS */
+/* Attach this class to any item you want to stretch across the full width */
+.gallery-item.span-2 {
+    grid-column: span 2;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MOBILE LAYOUT FIX)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .project-media-gallery {
+        /* Collapse everything into a clean single-column feed on phones */
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    /* Safely force spans back to 1 column so elements don't overflow small screens */
+    .gallery-item.span-2 {
+        grid-column: span 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   LIGHTBOX FULLSCALE OVERLAY SYSTEM
+   ========================================================================== */
+
+/* Darkened background panel layer */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.9); /* Deep matte dark shadow tint */
+    backdrop-filter: blur(4px); /* Modern frosted background effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000; /* Keeps it above headers and sticky navigation bars */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Lightbox active state handler */
+.lightbox-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Centered fullscale image element scaling */
+.lightbox-display-img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+/* Animate the image size when opening */
+.lightbox-overlay.active .lightbox-display-img {
+    transform: scale(1);
+}
+
+/* Close action element (X button) */
+.lightbox-close-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 300;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close-btn:hover {
+    color: #ff5555;
+    transform: scale(1.1);
+}
+
+/* Stylize grid gallery images to indicate they are clickable */
+.project-media-gallery .gallery-item img {
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.project-media-gallery .gallery-item img:hover {
+    transform: scale(1.02);
+    filter: brightness(0.9);
+}
