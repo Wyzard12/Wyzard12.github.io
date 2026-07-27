@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Wyzard's Ark</title>
+    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../../style/project_style/project_style.css">
+    <link rel="icon" href="../../img/WA.jpg" type="image/jpg">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo reveal-up">
+            <a href="../indexNL.html">
+                <img src="../../img/WAwhite-removebg.png" alt="Wyzard's Ark Logo">
+            </a>
+        </div>
+
+        <nav class="nav-links reveal-up">
+            <a href="../indexNL.html#about" class="nav-item-link">Terug naar de Introductie</a>
+            <a href="../indexNL.html#skills" class="nav-item-link">Terug naar de Vaardigheden</a>
+            <a href="../indexNL.html#projects" class="nav-item-link">Terug naar de Projecten</a>
+            <a href="../indexNL.html#contact" class="nav-item-link"> Contact</a>
+        </nav>
+
+        <div class="lang-selector reveal-up">
+            <a href="../../projects/Double_Pulsar.html" class="lang-item reveal-up">
+                <span>EN</span>
+                <img src="https://flagcdn.com/w20/gb.png" alt="Netherlands Flag" class="flag-icon reveal-up">
+            </a>
+            <span class="divider">|</span>
+            <a href="../../_VIE/projects/Double_Pulsar_VN.html" class="lang-item reveal-up">
+                <img src="https://flagcdn.com/w20/vn.png" alt="Vietnam Flag" class="flag-icon reveal-up">
+                <span>VN</span>
+            </a>
+        </div>
+
+        <button class="mobile-burger-btn reveal-up" aria-label="Toggle navigation menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+    </header>
+
+    <div class="mobile-menu-drawer">
+        <button class="close-drawer-btn">&times;</button>
+
+        <nav class="mobile-nav-links">
+            <a href="../indexNL.html#about" class="nav-item-link">Terug naar de Introductie</a>
+            <a href="../indexNL.html#skills" class="nav-item-link">Terug naar de Vaardigheden</a>
+            <a href="../indexNL.html#projects" class="nav-item-link">Terug naar de Projecten</a>
+            <a href="../indexNL.html#contact" class="nav-item-link">Contact</a>
+        </nav>
+
+        <div class="mobile-drawer-lang">
+            <a href="../../projects/Double_Pulsar.html" class="mobile-lang-item">English <img
+                    src="https://flagcdn.com/w20/gb.png" alt="Netherlands Flag"></a>
+            <span class="drawer-lang-divider">|</span>
+            <a href="../../_VIE/projects/Double_Pulsar_VN.html" class="mobile-lang-item"><img
+                    src="https://flagcdn.com/w20/vn.png" alt="Vietnam Flag">
+                Tiếng Việt</a>
+        </div>
+    </div>
+
+    <div class="drawer-overlay"></div>
+
+    <div class="notion-cover-frame">
+        <img src="../../img/Pulsar_Banner.png" alt="Project Banner Artwork" class="cover-img">
+    </div>
+
+    <main class="notion-page-container">
+
+        <header class="notion-page-header reveal-up">
+            <div class="notion-page-icon-wrapper">
+                <img src="../../img/alienGreen_stand.png" alt="Project Token Icon" class="page-token-icon">
+            </div>
+
+            <span class="project-meta-category">Solo spelontwikkelaar en ontwerper</span>
+
+            <h1 class="project-main-title">CODENAME DOULBE PULSAR</h1>
+        </header>
+
+        <section class="project-details-grid">
+
+            <div class="notion-textbox-card reveal-up">
+                <h3 class="textbox-card-title">IN HET KORT</h3>
+                <p>
+                    Ontwikkeld als een competitieve intaketest voor de <a
+                        href="https://www.buas.nl/en/programmes/creative-media-and-game-technologies/design-and-production"
+                        target="_blank">Breda University of Applied Sciences (BUas)</a>,
+                    is Double Pulsar een 2D side-scrolling platformer die is ontworpen om mijn kerncompetenties te
+                    bewijzen in
+                    analytisch game design, rapid prototyping en systemische ontwerpvisie.
+                    Geconfronteerd met strikte asset-beperkingen en onvoorziene fysica-obstakels, voerde ik halverwege
+                    het project een cruciale heroriëntatie door—waarbij ik de game vanaf de grond opnieuw opbouwde om de
+                    spelervaring te beschermen tegen bewegingsziekte en scope creep. Dit onderdeel van mijn portfolio
+                    belicht hoe ik prioriteit gaf aan een strak afgewerkt, volledig functioneel ontwerp in plaats van
+                    een foutgevoelige complexiteit, waarmee ik een technische tegenslag omzette in een waardevolle les
+                    over risicobeheer en spelergericht ontwerpen.
+
+                    <br><br>Om de game zelf te ervaren, kun je terecht op de <a
+                        href="https://koreaansebadman.itch.io/project-double-pulsar" target="_blank">itch.io-pagina van
+                        Codename Double Pulsar</a>.
+                </p>
+            </div>
+
+        </section>
+        <hr class="notion-divider reveal-up">
+
+        <h3 class="project-main-title">PROJECTOVERZICHT EN RANDVOORWAARDEN</h3>
+        <section class="project-intro-chapter reveal-up">
+            <p>
+                Het hoofddoel van de intake-opdracht bij BUas was niet simpelweg het opleveren van een afgeronde game,
+                maar het aantonen van een transparante en gestructureerde ontwerpmethodologie. De beoordeling lag sterk
+                op het "waarom" achter elke ontwerpbeslissing: het onderbouwen van mechanische keuzes, het vormgeven van
+                een heldere gameloop, het waarborgen van visuele voortgangsindicatie en het opzetten van een empirische
+                feedbackloop via externe playtesting.
+
+                <br><br>Voortbouwend op vier jaar ervaring koos ik Unity als mijn ontwikkelomgeving. De opdracht
+                vereiste een platformer van één tot drie levels en was gebonden aan een strikte voorwaarde: het gebruik
+                van custom externe visual assets was niet toegestaan, waardoor het productieproces beperkt bleef tot
+                zelfgemaakte assets of de open-source bibliotheek van Kenney. Vanwege het ontbreken van professionele
+                illustratievaardigheden zette ik deze beperking om in een ontwerpkracht. Door de eenvoudige, statische
+                animatie-frames uit de <a href="https://kenney.nl/assets" target="_blank">Kenney-bibliotheek</a> te
+                analyseren, ontwierp ik de bewegingsparameters in omgekeerde volgorde. In plaats van willekeurige fysica
+                te programmeren en de visuals daar later op aan te passen, stemde ik versnelling, vertraging en
+                sprongbogen nauwkeurig af op de visuele grenzen van de assets. Dit zorgde ervoor dat de avatar van de
+                speler aanvoelde als een responsieve entiteit in plaats van een gewichtloos geometrisch blokje.
+
+                <br><br>Kiezen voor een 2D-formaat stelde mij in staat meer mentale capaciteit te besteden aan
+                documentatie en systeemontwerp op hoog niveau. Dit bracht echter wel een steile leercurve met zich mee;
+                mijn academische achtergrond lag voornamelijk in 3D en ik had geen formele ervaring met 2D-leveldesign.
+                Om willekeurige en onoverzichtelijke level-lay-outs te voorkomen, deconstrueerde ik de
+                omgevingsmechanics van de game Blasphemous—waarbij ik specifiek onderzocht hoe deze game spelers subtiel
+                mechanieken aanleert via levelgeometrie. Vervolgens toetste ik deze casestudies in groepsdiscussies met
+                studiegenoten om mijn eerste structurele pacing-modellen te schetsen.
+            </p>
+        </section>
+
+        <h3 class="project-main-title">FASE 1: CONCEPTUATIE EN HOOFDDOELSTELLINGEN</h3>
+        <section class="project-intro-chapter reveal-up">
+            <p>
+                Omdat de beperkte kunst-assets geen complexe gevechtsanimaties bevatten, moest de diepgang van de
+                gameplay volledig voortkomen uit systemische complexiteit in plaats van levendige visuele actie. Ik
+                wilde de grenzen van eenvoudige vormen zoals kubussen en cirkels overstijgen om mezelf uit te dagen een
+                meeslepende, responsieve ervaring te creëren binnen deze strikte randvoorwaarden.
+                Het gekozen kernmechanisme werd Zwaartekrachtmanipulatie (Gravity Manipulation), waarbij spelers
+                navigeren door onstabiele omgevingen door gebruik te maken van lagedrukzones om ruimtelijke
+                verplaatsingspuzzels op te lossen.
+                <br><br>Om dit mechanisme narratief te verankeren, bood de verhaallijn een directe gevoelswaarde voor de
+                speler: een astronaut die gestrand is in de diepe ruimte moet navigeren door gevaarlijke kosmische zones
+                om het contact met de bemanning te herstellen. Geïnspireerd door het windstuwingsmechanisme in het
+                gebied <a href="https://www.youtube.com/watch?v=fwMZqzwrCGY" target="_blank">"Where Olive Trees Wither"
+                    uit
+                    Blasphemous</a>, gaf deze eenvoudige narratieve opzet antwoord op een cruciale ontwerpvraag over
+                spelermotivatie <i>("Waarom moet ik deze afgrond oversteken?")</i>.
+                <br><br>De initiële productieroadmap schetsings een duidelijke Tutorial ➔ Mastery pacingcurve, verdeeld
+                over drie macro-omgevingen:
+                <br><br><b>➔ Level 1 (Buitenaardse Ruimte)</b>: Introductie van de kern-bewegingsparameters,
+                cameracompensatie en basiszwaartekrachtfysica, culminerend in het ontgrendelen van de <i>Jetpack</i>.
+                <br><b>➔ Level 2 (Meteoorholtes)</b>: Escalatie van ruimtelijke moeilijkheidsgraad via gevaarlijke
+                omgevingsgeometrie, wat vereist dat de speler de <i>Double Jump</i>-upgradatie meester wordt.
+                <br><b>➔ Level 3 (Energiekerne)</b>: Een systemische uitdaging waarin spelers willekeurige
+                gevarenpatronen moeten analyseren, wat hen dwingt om alle eerder aangeleerde upgrades te combineren om
+                te overleven.
+            </p>
+        </section>
+
+
+        <!-- DYNAMIC MEDIA GALLERY GRID SECTION -->
+        <section class="project-media-gallery">
+
+            <div class="gallery-item span-2 reveal-up">
+                <img src="../../img/Brief_1.png" alt="Project Brief 1" class="gallery-img">
+            </div>
+
+            <div class="gallery-item span-2 reveal-up">
+                <img src="../../img/Brief_2.png" alt="Project Brief 2" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../../img/Concept_2.jpg" alt="Concept Art 2" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../../img/Concept_3.jpg" alt="Concept Art 3" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../../img/Concept_4.jpg" alt="Concept Art 4" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../../img/Concept_5.jpg" alt="Concept Art 5" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../../img/Concept_6.jpg" alt="Concept Art 6" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../../img/Concept_7.jpg" alt="Concept Art 7" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../../img/Concept_8.jpg" alt="Concept Art 8" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../../img/Concept_9.jpg" alt="Concept Art 9" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../../img/Concept_10.jpg" alt="Concept Art 10" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../../img/Concept_11.jpg" alt="Concept Art 11" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../../img/Concept_12.jpg" alt="Concept Art 12" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../../img/Concept_15.png" alt="Concept Art 12" class="gallery-img">
+            </div>
+
+        </section>
+
+        <h3 class="project-main-title">TECHNISCHE INCIDENTEN EN HET CRUCIALE KEERPUNT</h3>
+        <section class="project-intro-chapter reveal-up">
+            <p>
+                Zodra de daadwerkelijke productie van het zwaartekrachtprototype begon, stuitte het project op ernstige
+                mechanische complicaties.
+                Mijn gebrek aan geavanceerde ruimtelijke fysica-vergelijkingen en roterende calculus leidde tot een
+                uiterst onstabiel camerasysteem en onhandige traagheidsbesturing.
+                Een kritieke systeemfout hief bovendien continu de snelheid van de speler op bij de overgang tussen
+                zwaartekrachtvelden van afzonderlijke asteroïden, wat de natuurlijke, vloeiende beweging van de gameplay
+                verstoorde.
+
+                <br><br>Nog ingrijpender was dat het prototype een kernvoorwaarde van de opdracht schond: het was niet
+                langer een volwaardige side-scroller. De dynamisch draaiende camera veroorzaakte ernstige ruimtelijke
+                desoriëntatie en bewegingsziekte—een ernstige fout op het gebied van User Experience (UX).
+                Inziend dat het voortzetten van dit pad zou leiden tot het overschrijden van de strikte deadline en het
+                niet behalen van de projecteisen, zette ik mijn ego opzij en nam ik het besluit om het prototype
+                volledig te schrappen.
+
+                <br><br>Deze "harde les" leerde mij een cruciale les in de industrie: het duidelijke verschil tussen
+                theoretische concepten en praktische uitvoering. Het riskeren van een belangrijk project door in te
+                zetten op risicovolle, onbewezen technische mechanismen kan de gehele productiecyclus in gevaar brengen.
+
+                <br><br>Terug naar de tekentafel koos ik voor een stabieler ontwerp met een lager risicoprofiel: een
+                traditioneel side-scrolling kader reminiscent aan Super Mario Bros, maar aangepast aan mijn eigen
+                mechanische stijl.
+                Ik verkleinde de scope van het project, maar behield de kern van het verhaal en de mechanieken die wel
+                werkten. In plaats van te overleven in de diepe ruimte, navigeert de astronaut nu door een verlaten
+                faciliteit.
+                Om het gebrek aan ervaring in leveldesign op te vangen onder de hoge tijdsdruk, analyseerde ik samen met
+                een studiegenoot lay-outschetsen. We ontleedden hoe 2D-levels een structurele flow opbouwen, waarna ik
+                de definitieve lay-outs vormgaf volgens mijn eigen unieke ontwerpvisie.
+
+                <br><br>De initiële conceptschetsen werden direct getransformeerd tot een structurele roadmap, die
+                diende als de volledige blauwdruk voor de uiteindelijke levelgeometrie.
+            </p>
+        </section>
+
+        <section class="project-media-gallery">
+
+            <div class="gallery-item span-2 reveal-up">
+                <img src="../../img/Concept_1.png" alt="Concept 1" class="gallery-img">
+            </div>
+
+        </section>
+
+        <h3 class="project-main-title">ANALYSE VAN ONBOARDING EN UI-STRUCTUUR</h3>
+        <section class="project-intro-chapter reveal-up">
+            <p>
+                Inziend dat de eerste interactie van een speler bepalend is voor de betrokkenheid op de lange termijn,
+                gaf ik prioriteit aan een drempelvrije onboarding-ervaring voor Level 1. De level-lay-out vormde een
+                directe weerspiegeling van de initiële conceptschetsen en werd getransformeerd van een papierontwerp tot
+                een volledig functionele introductie-omgeving.
+                Omdat het onboarding-proces veilige ruimtes vereist om te oefenen met de mechanieken, koos ik voor de
+                filosofie van "forgiving design": omgevingsgevaren werden tot een minimum beperkt en een mislukte
+                platforming-poging leidde nooit tot een fatale straf. In plaats daarvan stuurde het leveldesign spelers
+                naar organische fout-loops, waar ze veilig opnieuw konden proberen en de mechanieken meester konden
+                worden.
+
+                <br><br>Deze analytische benadering van de initiële pacing werd bevestigd tijdens de playtest-fase,
+                waarin <b>100% van de testers</b> de introductiefase succesvol doorliep zonder frustratie of technische
+                verwarring.
+
+                <br><br>
+
+                <b>Visuele begeleiding & UI-hiërarchie</b>
+
+                <br><br>Om deze ruimtelijke onboarding aan te vullen, paste ik een strikt <i>"show, don't
+                    tell"</i>-kader toe op het UI-ontwerp. Ik liet tekstzware beschrijvingen voor de
+                basis-bewegingsmechanieken—zoals lopen, springen en dashen—achterwege en integreerde in plaats daarvan
+                minimalistische, universele vectoriconen direct in de speelomgeving. Deze structurele keuze verminderde
+                kognitieve overbelasting, waardoor spelers de besturing direct in context konden opnemen zonder dat hun
+                gameplay-flow werd onderbroken.
+
+                <br><br>Voor geavanceerdere mechanieken die vanwege hun systemische aard meer uitleg vereisten,
+                implementeerde ik contextuele instructiepanelen.
+                Deze UI-menu's werden stilistisch geïnspireerd door de donkere, sfeervolle weergavevensters uit
+                Blasphemous, wat zorgde voor een balans tussen informatieve helderheid en de meeslepende esthetiek van
+                de basis, zodat spelers zelfs tijdens de onboarding-momenten volledig ondergedompeld bleven.
+            </p>
+        </section>
+
+        <section class="project-media-gallery">
+
+            <div class="gallery-item span-2 reveal-up">
+                <img src="../../img/Concept_35.png" alt="Tutorial design concept" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../../img/Concept_17.png" alt="Tutorial design concept" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../../img/Concept_20.png" alt="Tutorial design concept" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../../img/Concept_25.png" alt="Tutorial design concept" class="gallery-img">
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <img src="../../img/Concept_28.png" alt="Tutorial design concept" class="gallery-img">
+            </div>
+
+        </section>
+
+        <h3 class="project-main-title">INTEGRATIE VAN GEVAREN EN SYSTEMISCHE MOEILIJKHEIDSGRAAD</h3>
+        <section class="project-intro-chapter reveal-up">
+            <p>
+                Om te voorkomen dat de standaard side-scrolling gameloop eentonig of saai werd, introduceerde ik
+                structurele omgevingsgevaren en statische vijanden om mechanische spanning en tactische diepgang
+                toevoegen.
+                Deze elementen varieerden van klassieke platforming-obstakels zoals bewegende zaagbladen tot
+                geautomatiseerde geschutskoepels en gevaarlijke zones met toxisch afval.
+
+                <br><br>In plaats van deze valstrikken willekeurig te plaatsen, hanteerde ik een modulaire
+                ontwerpmethode. Gevaren werden eerst afzonderlijk geïntroduceerd binnen een veilige context, zodat de
+                speler kon wennen, om vervolgens dynamisch gecombineerd te worden tot complexe ruimtelijke puzzels.
+
+                <br><br>Deze architectuur bereikte haar hoogtepunt in Level 3—de ontwerpclimax van de game—waar alle
+                gevaarelementen systemisch samenkwamen.
+                Dit dwong spelers om hun bewegingsmechanieken volledig te synchroniseren, wat snelle reflexen en exacte
+                timing vereiste om de structurele uitdagingen te overwinnen zonder een afstraffend "domino-effect" van
+                opeenvolgende schade te activeren.
+                De definitieve lay-out realiseerde een optimale balans in moeilijkheidsgraad—een ervaring die zowel
+                toegankelijk bleef voor beginners als uitdagend genoeg voor doorgewinterde platformer-spelers.
+            </p>
+        </section>
+
+        <h3 class="project-main-title">PLAYTESTING, DEMOGRAFISCHE DIVERSITEIT EN ITERATIE
+        </h3>
+        <section class="project-intro-chapter reveal-up">
+            <p>
+                Een game kan niet als functioneel afgerond worden beschouwd voordat deze een externe playtest-ronde
+                heeft doorstaan. Ontwikkelen in een gesloten omgeving creëert blinde vlekken voor de ontwikkelaar, wat
+                de kans op kritieke fouten en een gefragmenteerde gebruikerservaring vergroot. Om te voldoen aan de
+                strenge eisen van de BUas-intake-opdracht en persoonlijke vooringenomenheid te elimineren, voerde ik een
+                gestructureerd playtest-proces uit met een diverse groep van zeven externe deelnemers die volledig
+                losstonden van de ontwikkeling van het project.
+
+                <br><br>Om de toegankelijkheid van het initiële onboarding-systeem te testen, koos ik een brede
+                demografische doelgroep van jongvolwassenen (18–20 jaar) tot ouderen (60+ jaar). Deze brede opzet stelde
+                mij in staat om de intuïtiviteit van de besturing en het mechanische begrip te meten over verschillende
+                niveaus van game-ervaring.
+
+                <br><br>De empirische data die tijdens deze testsessies werd verzameld, speelde een cruciale rol bij het
+                verfijnen van de definitieve build:
+                <br>
+                <br><b>➔ Eerste fase (Knelpunten)</b>: De eerste twee testers stuitten op kritieke game-breaking bugs en
+                fysica-instabiliteit, wat hun ervaring aanzienlijk verstoorde. Ik behandelde deze fouten als essentiële
+                telemetrische data en pauzeerde de tests om direct dringende technische hotfixes door te voeren.
+                <br><b>➔ Tweede fase (Validatie)</b>: Na deze aanpassingen rapporteerden de resterende vijf testers een
+                hoge mate van tevredenheid. Ze navigeerden soepel door de levels en bevestigden dat de voortgangscurve
+                natuurlijk en meeslepend aanvoelde.
+            <div
+                style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 550px; margin: 20px auto; padding: 20px; background-color: #1e1e24; border-radius: 8px; border: 1px solid #3a3a42; color: #e0e0e6; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+
+                <!-- Step 1 -->
+                <div
+                    style="display: inline-block; padding: 10px 18px; background-color: #2e2e38; border: 2px solid #6c5ce7; border-radius: 6px; font-weight: bold; letter-spacing: 0.5px; color: #a29bfe;">
+                    [ Totale playtest-sessie van de game ]
+                </div>
+
+                <!-- Connector 1 -->
+                <div style="width: 2px; height: 25px; background-color: #6c5ce7; margin: 0 auto;"></div>
+
+                <!-- Split Bar -->
+                <div style="width: 70%; height: 2px; background-color: #6c5ce7; margin: 0 auto;"></div>
+
+                <!-- Side Connectors -->
+                <div style="width: 70%; margin: 0 auto; display: flex; justify-content: space-between;">
+                    <div style="width: 2px; height: 20px; background-color: #6c5ce7;"></div>
+                    <div style="width: 2px; height: 20px; background-color: #6c5ce7;"></div>
+                </div>
+
+                <!-- Split Content -->
+                <div style="display: flex; justify-content: space-between; width: 90%; margin: 0 auto; gap: 15px;">
+                    <!-- Left Column -->
+                    <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+                        <div
+                            style="padding: 8px 12px; background-color: #2d1f2d; border: 1px solid #ff7675; border-radius: 4px; font-size: 0.9em; font-weight: 600; color: #ff7675; width: 100%;">
+                            [ 2 vroege testers ]
+                        </div>
+                        <div style="width: 2px; height: 15px; background-color: #ff7675; opacity: 0.6;"></div>
+                        <div style="font-size: 0.85em; color: #d63031; line-height: 1.3;">
+                            Kritieke mechanische fouten ontdekt
+                        </div>
+                        <div style="width: 2px; height: 15px; background-color: #ff7675; opacity: 0.6;"></div>
+                        <div
+                            style="padding: 8px 12px; background-color: #222f3e; border: 1px solid #54a0ff; border-radius: 4px; font-size: 0.85em; font-weight: 600; color: #54a0ff; width: 100%;">
+                            [ Hotfixes & Optimalisatie ]
+                        </div>
+                    </div>
+
+                    <!-- Link Arrow (Left to Right) -->
+                    <div
+                        style="display: flex; align-items: flex-end; padding-bottom: 12px; color: #54a0ff; font-size: 1.2em; font-weight: bold;">
+                        ➔
+                    </div>
+
+                    <!-- Right Column -->
+                    <div
+                        style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: space-between;">
+                        <div
+                            style="padding: 8px 12px; background-color: #1f2d24; border: 1px solid #55efc4; border-radius: 4px; font-size: 0.9em; font-weight: 600; color: #55efc4; width: 100%;">
+                            [ 5 latere testers ]
+                        </div>
+                        <div style="width: 2px; height: 15px; background-color: #55efc4; opacity: 0.6;"></div>
+                        <div style="font-size: 0.85em; color: #00b894; line-height: 1.3;">
+                            100% voltooiingspercentage
+                        </div>
+                        <div style="width: 2px; height: 15px; background-color: #55efc4; opacity: 0.6;"></div>
+                        <div
+                            style="padding: 8px 12px; background-color: #1f2d24; border: 1px solid #55efc4; border-radius: 4px; font-size: 0.85em; font-weight: 600; color: #55efc4; width: 100%;">
+                            Soepele voortgang, spelervaring gevalideerd
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </p>
+        </section>
+
+        <section class="project-media-gallery">
+
+            <div class="gallery-item reveal-up">
+                <video src="../../Video/Double Pulsar playtest.mp4" alt="Playtest video 1" class="gallery-img" controls>
+                    Uw browser ondersteunt geen videotags.
+                </video>
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <video src="../../Video/Double Pulsar playtest 2.mp4" alt="Playtest video 2" class="gallery-img"
+                    controls>
+                    Uw browser ondersteunt geen videotags.
+                </video>
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <video src="../../Video/Double Pulsar Playtest 3.mp4" alt="Playtest video 3" class="gallery-img"
+                    controls>
+                    Uw browser ondersteunt geen videotags.
+                </video>
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <video src="../../Video/Double Pulsar before and after 1.mp4" alt="Before and after comparison 1"
+                    class="gallery-img" controls>
+                    Uw browser ondersteunt geen videotags.
+                </video>
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <video src="../../Video/Double Pulsar before and after 2.mp4" alt="Before and after comparison 2"
+                    class="gallery-img" controls>
+                    Uw browser ondersteunt geen videotags.
+                </video>
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <video src="../../Video/Double Pulsar Before and After - 3.mp4" alt="Before and after comparison 3"
+                    class="gallery-img" controls>
+                    Uw browser ondersteunt geen videotags.
+                </video>
+            </div>
+
+            <div class="gallery-item reveal-up">
+                <video src="../../Video/Double Pulsar before and after 4.mp4" alt="Before and after comparison 4"
+                    class="gallery-img" controls>
+                    Uw browser ondersteunt geen videotags.
+                </video>
+            </div>
+
+        </section>
+
+        <h3 class="project-main-title">CONCLUSIE EN PERSOONLIJKE REFLECTIE</h3>
+        <section class="project-intro-chapter reveal-up">
+            <p>
+                Dit document legt de volledige evolutie van Double Pulsar vast en toont de realiteit van
+                solo-game-ontwikkeling.
+                Door de tekortkomingen van het oorspronkelijke concept in kaart te brengen, kritieke technische
+                incidenten te documenteren en systemische heroriëntaties gedetailleerd te beschrijven om het eindproduct
+                te beschermen, dient dit project als concreet bewijs dat ik gereed ben voor geavanceerde game
+                design-studies.
+                <br><br>Het toont op heldere wijze mijn vermogen tot objectieve zelfreflectie, mijn inzicht in
+                spelerspsychologie en mijn bereidheid om een gebrekkig prototype vol overtuiging los te laten ten gunste
+                van een betere gebruikerservaring. Deze reis heeft mijn fundamentele overtuiging bevestigd dat
+                uitstekend game design geen product is van initiële ingevingen, maar een structureel kader dat wordt
+                gevormd door volhardende en gedisciplineerde iteratie.
+            </p>
+        </section>
+
+        <section class="project-details-grid">
+
+            <div class="notion-textbox-card reveal-up">
+                <h3 class="textbox-card-title">01 / Ego Loslaten & Scope-Beheer</h3>
+                <p>De nodige professionele volwassenheid getoond door een gebrekkig prototype vroegtijdig stop te
+                    zetten. Door prioriteit te geven aan het welzijn van de speler (het minimaliseren van
+                    bewegingsziekte) en het behalen van de deadline boven persoonlijke gehechtheid aan een idee, heb ik
+                    het project succesvol beschermd tegen fatale scope creep.</p>
+            </div>
+
+            <div class="notion-textbox-card reveal-up">
+                <h3 class="textbox-card-title">02 / Reverse-Engineering op Basis van Beperkingen</h3>
+                <p>Een ernstig tekort aan visual assets omgezette in een mechanische kracht. Door de bewegingsformules
+                    van de avatar exact af te stemmen op het daadwerkelijke aantal frames van de beschikbare
+                    Kenney-assets, is een strakke en responsieve gameloop gewaarborgd.</p>
+            </div>
+
+            <div class="notion-textbox-card reveal-up">
+                <h3 class="textbox-card-title">03 / Data-Gedreven Iteratie & Optimalisatie</h3>
+                <p>Een gestructureerd, generatieoverschrijdend playtest-model opgezet om ontwikkelaarsvooringenomenheid
+                    te elimineren. Hierbij zijn daadwerkelijke knelpunten van gebruikers en telemetrische data uit
+                    vroege builds omgezet in objectieve hotfixes die de balans aanzienlijk hebben verbeterd.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- WORK LOGOS FOOTER -->
+    <footer class="logo-footer reveal-up">
+        <div class="footer-logo-container">
+            <img src="../../img/DP_2.png" alt="Double Pulsar" class="footer-logo-img reveal-up">
+            <img src="../../img/Canberra.png" alt="Project Canberra" class="footer-logo-img reveal-up">
+            <img src="../../img/Orka.png" alt="Codename G.A.T.E" class="footer-logo-img reveal-up">
+            <img src="../../img/Hyphen_2.png" alt="Bug Studio Logo" class="footer-logo-img reveal-up">
+            <img src="../../img/Rigidbirdy.png" alt="Project Rigidbirdy" class="footer-logo-img reveal-up">
+        </div>
+
+        <footer class="logo-footer">
+            <div class="footer-bottom">
+                <p class="footer-credit-text">
+                    Wyzard'sArk 2017-<span id="current-year">2026</span> | Artwork door Rouse Cards (Kamen Rider Blade ©
+                    Toei nv)
+                </p>
+            </div>
+        </footer>
+    </footer>
+
+    <script src="../../script/script.js"></script>
+
+
+    <!-- LIGHTBOX MODAL OVERLAY -->
+    <div id="image-lightbox" class="lightbox-overlay" aria-hidden="true">
+        <span class="lightbox-close-btn">&times;</span>
+        <img class="lightbox-display-img" id="lightbox-target-img" src="" alt="Fullscale view">
+    </div>
+</body>
+
+</html>
