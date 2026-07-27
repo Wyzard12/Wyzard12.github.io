@@ -570,6 +570,7 @@ body {
 }
 
 .timeline-date-tag {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 0.85rem;
     font-weight: 600;
     color: #8c8c8c;
@@ -577,6 +578,7 @@ body {
 }
 
 .timeline-degree-title {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 1.15rem;
     font-weight: 600;
     color: #222222;
@@ -584,6 +586,7 @@ body {
 }
 
 .timeline-institution-name {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 0.95rem;
     color: #555555;
     margin: 0;
